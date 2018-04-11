@@ -25,9 +25,9 @@ echo '<hr>';
 
 $a = 0;
 do{
-  if($a == 0) echo "$a - это ноль </br>";
-  else if($a % 2 == 0) echo "$a - чётное число </br>";
-  else echo "$a - нечётное число </br>";
+  if($a == 0) echo "{$a} - это ноль </br>";
+  else if($a % 2 == 0) echo "{$a} - чётное число </br>";
+  else echo "{$a} - нечётное число </br>";
   $a++;
   } while($a <= 10);
 echo '<hr>';	
