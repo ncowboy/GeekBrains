@@ -1,0 +1,53 @@
+
+figcaption {
+  color: $dark-gray;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+figure {
+  display: flex;
+  justify-content: space-between;
+  width: 47%;
+  margin-bottom: 30px;
+}
+
+.screenshot {
+  width: 200px;
+  background-color: white;
+  flex-shrink: 0;
+  margin-right: 15px;
+  div {
+    width: 200px;
+    background-color: $dark-gray;
+    flex-shrink: 0;
+    margin-right: 15px;
+  }
+}
+
+.screenshot-container {
+  display: flex;
+  flex-wrap: wrap;
+  article {
+    width: 47%;
+    display: flex;
+    margin-right: 32px;
+  }
+}
+
+.screenshots h2
+{
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+
+.screenshots {
+  background-color: white;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}

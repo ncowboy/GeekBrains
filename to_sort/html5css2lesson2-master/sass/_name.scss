@@ -1,0 +1,30 @@
+.modal-body {
+  padding: 5px;	
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  background-color: $dark-gray;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+  i {
+    margin-right: 10px; 	
+  }
+  ul {
+    margin-top: 50px;
+  }
+  li {
+    list-style: none;
+  }
+}
+
+.product-img {
+  width: 470px;
+  background-color: $dark-gray;
+  cursor: pointer;
+}

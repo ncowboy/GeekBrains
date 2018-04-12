@@ -1,0 +1,26 @@
+
+.menuItem {
+   /* display: inline-block; */
+    list-style: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #4b4b4b;
+    margin-right: 34px;
+    font-family: Tahoma;
+}
+
+a { color: #4b4b4b;
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+a:hover{
+    color: #ff8700;
+}
+
+.galleryImg {
+    display: inline-block;
+    margin: 20px;
+}

@@ -1,0 +1,115 @@
+
+footer {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: $dark-gray;
+  h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+	margin-top: 0;
+  }
+}
+
+.contacts {
+ li {
+	color: white;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	list-style-type: none;
+	margin-bottom: 24px;
+ }
+ i {
+	font-size: 20px;
+ }
+ 
+ span {
+	margin-left: 5px;
+ }
+}
+
+.contacts-wrapper {
+  margin-left: 45px;
+}
+
+.footer-bottom {
+  background-color: $light-gray;
+  text-align: center;
+  p {
+    color: $dark-gray;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+  }
+}
+
+.footer-top {
+  padding: 40px;
+   form {
+     width: 40%;
+   }
+}
+
+
+.form-control {
+  color: $dark-gray;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+.form-submit {
+  width: 28%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+	
+}
+
+
+.form-control::placeholder {
+	color:  $dark-gray;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+
+}
+
+.social a {
+  display: inline-block;
+  width: 48px;	
+  height: 48px;
+  background-color: $dark-gray;
+  background-image: url("../img/social_bg.png");
+  background-position-y: 3px;
+  background-position-x: 2px;
+  background-repeat: no-repeat;
+}
+
+.social a:nth-child(2) {
+  background-position-x: -47px;
+}
+
+.social a:nth-child(3) {
+  background-position-x: -96px;
+}
+
+.social a:nth-child(4) {
+  background-position-x: -145px;
+}
+
+.social a:nth-child(5) {
+  background-position-x: -194px;
+}
+
+
+
+
+
+

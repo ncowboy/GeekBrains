@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание к уроку №4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            tabSwitcher('#tabBlock1', '#tabBlock2', '#tabBlock3', '#block1', '#block2', '#block3');
+            tabSwitcher('#tabBlock2','#tabBlock1', '#tabBlock3','#block2', '#block1', '#block3');
+            tabSwitcher('#tabBlock3', '#tabBlock1', '#tabBlock2', '#block3', '#block1', '#block2');
+
+            function tabSwitcher (selector, selector1, selector2, block, block1, block2) {
+                $(selector).click(function(){
+                    $(selector).removeClass('tab').addClass('tab-active');
+                    $(selector1).removeClass('tab-active').addClass('tab');
+                    $(selector2).removeClass('tab-active').addClass('tab');
+                    $(block).show();
+                    $(block1).hide();
+                    $(block2).hide();
+                })
+            }
+        })
+    </script>
+</head>
+<body>
+    <header>
+       <div id="header-content">
+           <h1> Часть 1. JQuery скрипт для блока со вкладками</h1>
+           <div id="tab-hor">
+               <a href = "#" id="tabBlock1" class="tab-active">Вкладка1</a>
+               <a href = "#" id="tabBlock2" class="tab">Вкладка2</a>
+               <a href = "#" id="tabBlock3" class="tab">Вкладка3</a>
+           </div>
+       </div>
+    </header>
+    <div id="container">
+            <div id="block1" class="containerBlock">
+                Блок1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's               standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a                  type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,                         remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing                     Lorem Ipsum passages, and more recently with desktop  publishing software like Aldus PageMaker including versions of                Lorem Ipsum.
+            </div>
+            <div id="block2" class="containerBlock">
+                Блок2. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin                literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney                       College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and                    going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes                   from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,                     written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first                   line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            </div>
+            <div id="block3" class="containerBlock">
+                 Блок3. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration                    in some form, by injected humour, or randomised words which don't look even slightly believable. If you are                         going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the                          middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,                       making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined                        with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem                    Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+            </div>
+            <div>
+                <h1>Часть 2. Валидация формы</h1>
+				<div id="callback"></div>
+                <form>
+                    <p>login</p>
+                    <input type="text" id="login">
+                    <p>password</p>
+                    <input type="text" id="password">
+                    <p>email</p>
+                    <input type="text" id="email">
+                    <p>gender</p>
+                    <select id="gender">
+                        <option selected=""> </option>
+                        <option>m</option>
+                        <option>f</option>
+                    </select>
+                    <p>credit card</p>
+                    <input type="text" id="card">
+                    <p>bio</p>
+                    <textarea id="bio" rows="5" cols="20"></textarea>
+<!--[if IE]> <p>Введите дату рождения в формате yyyy-mm-dd </p><![endif]-->
+                    <p>Date</p>
+                    <p> <input type="date" id="date" max="1999-01-01"> </p>
+                   <p> <input type="submit" id="button"></p>
+                </form>
+            </div>
+
+                
+    </div>
+    <script>
+
+        $(function() {
+            $('#button').click(function(){
+                $('#callback').html('');
+                $.post('validator.php', {
+                    username: $('#login').val(),
+                    password: $('#password').val(),
+                    email: $('#email').val(),
+                    gender: $('#gender').val(),
+                    credit_card: $('#card').val(),
+                    bio: $('#bio').val(),
+                    birth: $('#date').val(),
+                }, function (callBack) {
+                    if ($.parseJSON(callBack).result === true) {
+                        $('#callback').removeClass('callback-wrong').addClass('callback-succeeded');
+                        $('#callback').append('Валидация пройдена')}
+                    else {
+                        event.preventDefault();
+                        $('#callback').removeClass('callback-succeeded').addClass('callback-wrong');
+                        $('#callback').append('Валидация не пройдена' + '<br>');
+                        for (var key in $.parseJSON(callBack).error){
+                            $('#callback').append(key + ': ' + $.parseJSON(callBack).error[key] + '<br>');
+                        }
+                    }
+                    })
+                })
+            })
+
+    </script>
+</body>
+</html>

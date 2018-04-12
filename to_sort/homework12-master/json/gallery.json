@@ -1,0 +1,31 @@
+[
+    {
+        "class": "galleryImg",
+        "title": "Redmi note 3",
+        "alt": "rmn3",
+        "fullSizeSrc": "../img/rmn3.jpg",
+        "thumbSrc": "../img/thumbnails/rmn3-mini.jpg"
+    },
+    {
+        "class": "galleryImg",
+        "title": "mi Band 2",
+        "alt": "miband2",
+        "fullSizeSrc": "../img/miband2.jpg",
+        "thumbSrc": "../img/thumbnails/miband2-mini.jpg"
+    },
+    {
+        "class": "galleryImg",
+        "title": "Powerbank 20000 mAh",
+        "alt": "Powerbank",
+        "fullSizeSrc": "../img/powerbank.jpg",
+        "thumbSrc": "../img/thumbnails/powerbank-mini.jpg"
+    },
+    {
+        "class": "galleryImg",
+        "title": "Wi-fi mini",
+        "alt": "Wi-fi mini",
+        "fullSizeSrc": "../img/wifimini.jpg",
+        "thumbSrc": "../img/thumbnails/wifi-mini.jpg"
+    }
+
+]

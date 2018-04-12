@@ -1,0 +1,51 @@
+
+.avatar {
+  background-color: $dark-gray;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.avatar1 {
+  background-image: url("../img/review1.jpg");
+  background-size: cover;
+}
+
+.avatar2 {
+  background-image: url("../img/review2.jpg");
+  background-size: cover;
+}
+
+.avatar3 {
+  background-image: url("../img/review3.jpg");
+  background-size: cover;
+}
+
+.avatar4 {
+  background-image: url("../img/review4.jpg");
+  background-size: cover;
+}
+
+
+.review {
+  background-color: $light-gray;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  background-image: url("../img/review_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+    p {
+	  margin-left: 25px;
+	  margin-top: 5px;
+	}
+}
+
+.reviews {
+  background-color: $light-gray;
+  h2 {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}

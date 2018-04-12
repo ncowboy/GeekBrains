@@ -1,0 +1,15 @@
+input {
+     background-color: lightpink;
+ }
+
+.sendbutton{
+    background-color: lightblue;
+}
+
+#phone, #email, #passportId, #passportNumber{
+    background-color: lightgreen;
+}
+
+#phoneMessage, #eMailMessage, #passportIdMessage, #passportNumberMessage {
+    color: red;
+}

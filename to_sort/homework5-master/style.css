@@ -1,0 +1,62 @@
+body {
+ font-family: "Trebuchet MS";
+ }
+
+ h1, h2 {
+   margin: 20px auto;
+  text-align: center;
+ }
+ .timer {
+background-color: #005e9f;
+width: 300px;
+height: 87px;
+font-size: 55pt;
+color: #bfbfbf;
+margin: 0 auto;
+paddind-top: 2px;
+text-align: center;
+border: 3px solid #bfbfbf;
+border-radius: 28px;
+border
+padding-top: 10px;
+}
+.button {
+background-color: #dacf23;
+width: 100px;
+height: 30px;
+font-size: 20pt;
+color: white;
+margin: 0 auto;
+paddind-top: 2px;
+text-align: center;
+border: 1px solid #bfbfbf;
+border-radius: 8px;
+}
+
+.button a {
+display: block;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+.voter {
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+}
+
+.up a, .vote a, .down a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 30pt;
+  text-decoration: none;
+  text-align: center;
+}
+.up a, .down a {
+  border: 1px solid black;
+}
+.vote {
+  font-size: 30pt;
+  margin: auto 10px;
+}

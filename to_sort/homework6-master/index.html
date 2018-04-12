@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание к уроку №4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel = "stylesheet" href = "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src = "https://code.jquery.com/jquery-1.12.4.js" ></script>
+    <script src = "https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
+
+</head>
+<body>
+    <div id="container">
+
+                <h1>Часть 2. Валидация формы</h1>
+				    <div id="progressbar">  </div>
+            <div class="progressValue"> </div>
+
+
+                <form id="form" action="#">
+                    <p>Логин</p>
+                    <input type="text" id="login">
+                    <p>Пароль</p>
+                    <input type="text" id="password">
+                    <p>email</p>
+                    <input type="text" id="email">
+                    <p>пол</p>
+                    <select id="gender">
+                        <option selected=""> </option>
+                        <option>m</option>
+                        <option>f</option>
+                    </select>
+                    <p>номер карты</p>
+                    <input type="text" id="card">
+                    <p>Биография</p>
+                    <textarea id="bio" rows="5" cols="20"></textarea>
+                    <p>Дата рождения</p>
+                    <p> <input id="date" placeholder="гггг-мм-дд">  </p>
+                   <p> <input type="submit" id="button"></p>
+                </form>
+            </div>
+
+
+    </div>
+
+
+
+
+<script src = "script.js"> </script>
+</body>
+</html>

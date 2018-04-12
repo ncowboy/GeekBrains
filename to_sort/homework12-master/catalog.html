@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание к уроку №1</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <script type="text/javascript">
+    var phonesList = function () {
+        var xhr1;
+        if (window.XMLHttpRequest) {
+            xhr1 = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xhr1 = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr1.open('GET', 'http://jslev2lesson2/json/phones.json', true);
+
+        xhr1.onreadystatechange = function () {
+            if (xhr1.readyState == 4 && xhr1.status == 200) {
+                document.body.insertAdjacentHTML('beforeEnd', "<ul></ul>");
+                var phones_json = JSON.parse(xhr1.response);
+                for (var key in phones_json) {
+                    var result = '<li>' + phones_json[key].name + '</li>';
+                    document.body.firstElementChild.nextElementSibling.insertAdjacentHTML('beforeEnd', result);
+                }
+            }
+        };
+        xhr1.send();
+    }
+    </script>
+</head>
+<body>
+<script src = "js/JSlev2lesson1hw1.js"> </script>
+<script src = "js/gallery.js"></script>
+<input id="button" value="Получить список телефонов" type="button" onclick = 'phonesList()'>
+</body>
+</html>

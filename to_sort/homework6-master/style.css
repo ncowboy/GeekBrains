@@ -1,0 +1,79 @@
+html{
+    font-family: Arial;
+
+}
+h1 {
+    width: 900px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+}
+header {
+    background-color: gray;
+}
+
+#header-content {
+    background-color: gray;
+    width: 900px;
+    margin: 0 auto;
+}
+#container{
+    width: 900px;
+    margin: 0 auto;
+}
+
+
+.tab {
+    height: 40px;
+    width: 100px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #96b9cd;
+    color: white;
+    text-align: center;
+    border-radius: 6px 6px 0 0 ;
+    border-bottom: 1px solid #96b9cd;
+    margin-right: 1px;
+    padding-top: 20px;
+}
+
+
+.tab-active {
+    height: 40px;
+    width: 100px;
+    display: inline-block;
+    background-color: white;
+    color: gray;
+    text-align: center;
+    border-radius: 6px 6px 0 0 ;
+    border-bottom: 1px solid white;
+    margin-right: 1px;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+.containerBlock {
+    height: 200px;
+    width: 900px;
+    margin-top: 10px;
+
+}
+
+#callback{
+	float: right;
+	margin-top: 20px;
+  height: 100px;
+  width: 200px;
+}
+.callback-wrong {
+    color: red;
+}
+
+.callback-succeeded {
+    color: blue;
+}
+
+
+#block2, #block3 {
+    display: none;
+}

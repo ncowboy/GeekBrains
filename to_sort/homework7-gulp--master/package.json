@@ -1,0 +1,23 @@
+{
+  "name": "gulpproject",
+  "version": "1.0.0",
+  "description": "gulp project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncowboy/homework7-gulp-.git"
+  },
+  "author": "Igor Borisov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ncowboy/homework7-gulp-/issues"
+  },
+  "homepage": "https://github.com/ncowboy/homework7-gulp-#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1"
+  }
+}
