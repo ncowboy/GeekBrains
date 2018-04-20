@@ -15,15 +15,7 @@ require_once '../functions/main.php'
   <body>
 	<div class="container">
       <h2>Галерея</h2>
-	  <div><?=filesUpload();?></div>
-	  <div><?=galleryRender(WEBROOT . 'img/');?></div>
-	  <form enctype="multipart/form-data" method="post">
-	    <div class="form-group">
-          <input type="file" name = "file">
-          <p class="help-block"><?=$_FILES['file']['error']?></p>
-        </div>
-		<button type="submit" class="btn btn-primary">Загрузить</button>
-	  </form>
+	  <?=galleryRender(WEBROOT . 'img/');?>
 	</div>
     <div class="modal fade" id="modal">
 	  <div class="modal-dialog">
