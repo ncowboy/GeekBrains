@@ -15,7 +15,6 @@ require_once '../functions/main.php'
   <body>
 	<div class="container">
       <h2>Галерея</h2>
-	  <div><?=filesUpload();?></div>
 	  <div><?=galleryRender(WEBROOT . 'img/');?></div>
 	  <form enctype="multipart/form-data" method="post">
 	    <div class="form-group">
