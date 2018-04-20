@@ -1,7 +1,7 @@
 <?php
 
-define('A_TAG_OPEN', '<a data-toggle="modal" data-target="#modal" href="#"');
-define('A_TAG_CLOSE', '</a>');
+define('A_TAG_OPEN', '<div class="col-md-3"><a data-toggle="modal" data-target="#modal" href="#"');
+define('A_TAG_CLOSE', '</a><div>Количество просмотров: <span class="badge">35</span></div></div>');
 define('IMG_TAG_OPEN', '<img width="200" class="img img-thumbnail" src="');
 define('IMG_TAG_CLOSE', '">');
 define('TYPE_ERROR', 'Неподдерживаемый тип файла. Допускаются форматы jpg, png, gif');
@@ -22,7 +22,7 @@ $tmp = $_FILES['file']['tmp_name'];
 	if (isset($files)){
 	  for($i = 2; $i < count($files); $i++){
 		$imgUrl = WEBROOT . 'img/' . $files[$i]; 
-		  echo A_TAG_OPEN . '>' . IMG_TAG_OPEN . $imgUrl . IMG_TAG_CLOSE . A_TAG_CLOSE;
+		  echo A_TAG_OPEN . '>' . IMG_TAG_OPEN . $imgUrl . IMG_TAG_CLOSE . A_TAG_CLOSE ;
 		}
 	}
  }
