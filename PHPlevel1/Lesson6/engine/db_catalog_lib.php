@@ -29,7 +29,8 @@ function addItemIntoDb($item){
 }
 
 function updateDbItem($id, $item){
-  $sql = "UPDATE items SET name='{$item[name]}', alias='{$item[alias]}', price='{$item[price]}', short_desc='{$item[short_desc]}', full_desc='{$item[full_desc]}'";
+  $sql = "UPDATE items SET name='{$item[name]}', alias='{$item[alias]}', "
+  . "price='{$item[price]}', short_desc='{$item[short_desc]}', full_desc='{$item[full_desc]}'";
   if(!empty($item[images])){
     foreach ($item[images] as $key=>$value){
       $sql .= ", $key = '{$value}'";
