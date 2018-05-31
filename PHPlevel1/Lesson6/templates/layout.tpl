@@ -48,37 +48,39 @@
                </div>
             </div>
             <div id="gradient-line"> </div>
-              <?php if (uriController()== '') include_once 'slider.php'; ?>
-              <?php if (uriController()== 'feedback') include_once 'feedback_form.php'; ?>
+              <?php if (uriController()== '/') include_once 'slider.tpl'; ?>
+              <?php if (uriController()== '/feedback') include_once 'feedback_form.tpl'; ?>
          </header>
          <?php
          switch(uriController()){
-           case '': include_once WEB_ROOT . 'index.php';
+           case '/': include_once WEB_ROOT . 'index.php';
              break;
-           case 'catalog': include_once 'catalog.php';
+           case '/catalog': include_once 'catalog.tpl';
              break;
-           case 'delivery': include_once 'delivery.php';
+           case '/delivery': include_once 'delivery.tpl';
              break;
-           case 'feedback': include_once 'feedback.php';
+           case '/feedback': include_once 'feedback.tpl';
              break;
-           default : include_once '404.php';
+           case '/contacts': include_once 'contacts.tpl';
+             break;
+           default : include_once '404.tpl';
          }
          ?>
-         <footer>
-            <div id="footer-content">
-               <div id="copyright">
-                  <strong>&copy; MiPoint.ru</strong>. Разработка сайта <a href="#">Игорь Борисов</a>. Все права защищены
-               </div>
-               <div id="social-icons-block">
-                  <a href="#"></a>
-                  <a href="#"></a>
-                  <a href="#"></a>
-                  <a href="#"></a>
-                  <a href="#"></a>
-               </div>
-            </div>
-         </footer>
       </div>
+      <footer>
+           <div id="footer-content">
+              <div id="copyright">
+                 <strong>&copy; MiPoint.ru</strong>. Разработка сайта <a href="#">Игорь Борисов</a>. Все права защищены
+              </div>
+              <div id="social-icons-block">
+                 <a href="#"></a>
+                 <a href="#"></a>
+                 <a href="#"></a>
+                 <a href="#"></a>
+                 <a href="#"></a>
+              </div>
+           </div>
+      </footer>
    </body>
 </html>
 

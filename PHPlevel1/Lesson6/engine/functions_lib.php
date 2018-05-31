@@ -1,6 +1,6 @@
 <?php
 
-require_once 'db.php';
+require_once 'db_lib.php';
 
 define('CATALOG_OPEN_TAG', '<div class="item-preview"><a href="/catalog?item_id=');
 define('IMG_CONTAINER_TAG', '"></a><div class="image-container"><img src="img/catalog/');
@@ -51,7 +51,7 @@ function feedbacksView(){
 
 function catalogItemView($id){
   $catalogItem = getCatalogItemFromDb($id);
-  isset($catalogItem) ? include_once '../templates/catalog_item.php' : include_once '../templates/404.php' ;
+  isset($catalogItem) ? include_once '../templates/catalog_item.tpl' : include_once '../templates/404.tpl' ;
 }
 
 function breadCrumbsRender($array){
@@ -63,12 +63,12 @@ function breadCrumbsRender($array){
   }
 
 function uriController(){
-  $uriArr = explode('/', $_SERVER['REQUEST_URI']);
-  $requestDelimiter = stripos($uriArr[1], '?');
+  $uri = $_SERVER['REQUEST_URI'];
+  $requestDelimiter = stripos($uri, '?');
     if($requestDelimiter) {
-     return mb_substr($uriArr[1], 0, $requestDelimiter);
+     return mb_substr($uri, 0, $requestDelimiter);
      }else{
-       return $uriArr[1];
+       return $uri;
       }
  }
 

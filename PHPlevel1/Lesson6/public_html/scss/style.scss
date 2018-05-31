@@ -13,8 +13,10 @@ html, body {
 }
 
 .wrapper {
-  position: relative;
   min-height: 100%;
+  height: auto;
+  margin: 0 auto -53px;
+  padding: 0 0 53px;
 }
 
 header {
@@ -139,6 +141,11 @@ hr {
       color: #ff8700;
     }
   }
+}
+tbody {
+ th {
+   font-weight: 400;    
+ }
 }
 
 .search-cart {
@@ -431,10 +438,6 @@ footer {
   font: 12px Verdana;
   color: #898989;
   background-color: #292929;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   a {
     color: #ff8700;
     text-decoration: none;
@@ -510,6 +513,105 @@ footer {
 
 .form-container{
     width: 35%;
+}
+.help-block{
+    color: red;
+}
+
+#contact-form {
+width:50%;
+float:left;
+margin-top:10px;
+}
+
+#map {
+width:50%;
+float:right;
+margin-top:10px;
+}
+
+.sendbutton {
+width:200px;
+height:50px;
+background-color:gray;
+color:#fff;
+text-align:center;
+border:1px solid #ff8700;
+margin:20px 0 0 20px;
+}
+
+.form-text {
+font-size:12px;
+}
+
+.contact-info-text {
+margin-top:10px;
+color:#888;
+size:14px;
+}
+.contact-form {
+border:26px solid transparent;
+-webkit-box-shadow:20px #e7e7e7;
+box-shadow:0 0 20px #e7e7e7;
+width:80%
+    input {
+        width:300px;
+        height:20px;
+        display:block;
+        font-size:16px;
+        color:#a71818;
+        font-weight:700;
+        background-color:#f1ee99;
+        border:1px solid #ff8700;
+        border-radius:4px;
+    }
+    select {
+        font-size:16px;
+        color:#a71818;
+        font-weight:700;
+        border-radius:4px;
+        display:block;
+        width:75px;
+        height:20px;
+        background-color:#f1ee99;
+        border:#a71818 1px solid;
+        margin:10px;
+        }
+
+        textarea {
+        font-size:16px;
+        color:#a71818;
+        font-weight:700;
+        border-radius:4px;
+        width:300px;
+        height:204px;
+        background-color:#f1ee99;
+        border:1px solid #ff8700;
+        resize:none;
+        }
+}
+
+
+
+.text_field {
+display:block;
+text-transform:capitalize;
+}
+
+#text-field {
+float:right;
+height:223px;
+border-radius:4px;
+}
+
+#text-field .form-text {
+display:block;
+margin-top:3px;
+}
+
+#email:focus:hover {
+color:navy;
+background-color:#FFF;
 }
 
 
